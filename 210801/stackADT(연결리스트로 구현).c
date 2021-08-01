@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "stackADT.h"
+
 struct node {
    Item data;
    struct node* next;
