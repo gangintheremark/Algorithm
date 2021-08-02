@@ -10,8 +10,8 @@
 
 struct node {
 	char* data;
-	struct node next;
-	struct node prev;
+	struct node* next;
+	struct node* prev;
 };
 
 typedef struct node Node;
