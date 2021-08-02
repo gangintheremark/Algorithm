@@ -114,6 +114,7 @@ void add_first(int item) {
 	head = p;
 }
 
+
 void add_after(int item, Node* p)
 {
 	Node* q = (Node*)malloc(sizeof(Node));
