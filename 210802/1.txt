@@ -1,0 +1,5 @@
+자꾸 테스트케이스는 다 맞는데 런타임 에러가 뜬다 ,,,,
+1. Access null pointer
+2. segmentation fault 
+나중에 어떻게 고쳐야하는지 꼭 수정 ★★★
+ + 백준 10828번 문제
