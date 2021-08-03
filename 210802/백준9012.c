@@ -1,5 +1,5 @@
-#pragma warning (disable:4996)
 #include <stdio.h>
+#include <stdlib.h>
 
 struct node {
 	char data;
@@ -13,7 +13,6 @@ typedef struct node Node;
 
 Stack* s = NULL;
 
-void check_VPS(char*);
 void push(Stack*, char);
 char pop(Stack*);
 int main()
@@ -25,18 +24,19 @@ int main()
 
 	for (int i = 0; i < T; i++) {
 
+		s = NULL;
 		scanf("%s", buffer);
 
 		int n = 0;
 		while (buffer[n] != '\0')
 		{
 			if (buffer[n] == '(')
-				push(&s, buffer[n]);
+				push(s, buffer[n]);
 			else {
 				if (s == NULL) {
 					break;
 				}
-				pop(&s);
+				pop(s);
 			}
 			n++;
 		}
