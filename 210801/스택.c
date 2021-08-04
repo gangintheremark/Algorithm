@@ -25,5 +25,4 @@ int main()
    
    push(s1, 12);
    push(s2, 9);
-
 }
