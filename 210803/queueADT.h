@@ -1,6 +1,5 @@
 #ifndef QUEUEADT_H
 #define QUEUEADT_H
-
 #include <stdbool.h>
 
 typedef int Item;

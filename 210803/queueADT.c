@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "queueADT.h"
-
 /*연결리스트로 구현 */
 struct node {
 	Item data;
