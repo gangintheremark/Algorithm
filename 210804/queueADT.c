@@ -57,7 +57,6 @@ bool is_full(Queue q) {
 	return q->size == q->capacity;
 }
 
-
 void enqueue(Queue q, Item i) // 큐의 맨 뒤(rear)에 추가
 {
 
