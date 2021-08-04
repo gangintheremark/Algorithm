@@ -11,7 +11,6 @@ struct queue_type {
 	struct node* rear;
 	int size;
 };
-
 void terminate(const char* message)
 {
 	printf("%s\n", message);
