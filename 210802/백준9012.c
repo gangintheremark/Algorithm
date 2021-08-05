@@ -1,30 +1,28 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
+#define INIT_CAPACITY 51
 
-struct node {
-	char data;
-	struct node* next;
-};
 struct stack {
-	struct node* top;
+	char* contents;
+	int top;
 };
 typedef struct stack Stack;
-typedef struct node Node;
 
-Stack* s = NULL;
-
+Stack* create();
 void push(Stack*, char);
-char pop(Stack*);
+void pop(Stack*);
+bool is_empty(Stack*);
+
 int main()
 {
 	int T;
-	char buffer[50];
-	
+	char buffer[INIT_CAPACITY];
+
 	scanf("%d", &T);
 
 	for (int i = 0; i < T; i++) {
-
-		s = NULL;
+		Stack* s = create();
 		scanf("%s", buffer);
 
 		int n = 0;
@@ -33,45 +31,47 @@ int main()
 			if (buffer[n] == '(')
 				push(s, buffer[n]);
 			else {
-				if (s == NULL) {
+				if (is_empty(s))
 					break;
-				}
 				pop(s);
 			}
 			n++;
 		}
-		if (s != NULL)
-			printf("No\n");
-		else if (s == NULL && buffer[n] != '\0')
-			printf("No\n");
-		else
-			printf("Yes\n");
 
+		if (!is_empty(s))
+			printf("NO\n");
+		else if (is_empty(s) && buffer[n] != '\0')
+			printf("NO\n");
+		else
+			printf("YES\n");
+
+		free(s);
 
 	}
 	return 0;
 }
-
-
-void push(Stack* s, char item)
+Stack* create()
 {
-	Node* new_node = (Node*)malloc(sizeof(Node));
+	Stack* s = malloc(sizeof(Stack));
 
-	if (s == NULL) 
-		s->top->data = item;
+	s->contents = (char*)malloc(INIT_CAPACITY * sizeof(char));
 
-	else {
-		new_node->data = item;
-		new_node->next = s->top;
-		s->top = new_node;
-	}
+	if (s->contents == NULL)
+		free(s);
+
+	s->top = -1;
+	return s;
 }
-char pop(Stack* s)
+void push(Stack* s, char c)
 {
-	Node* old_node = (Node*)malloc(sizeof(Node));
-
-	old_node->data = s->top->data;
-	s->top = s->top->next;
-
-	return old_node->data;
+	s->top++;
+	s->contents[s->top] = c;
+}
+void pop(Stack* s)
+{
+	s->top--;
+}
+bool is_empty(Stack* s)
+{
+	return s->top == -1;
 }
