@@ -24,10 +24,10 @@ int main()
 	int N, K;
 	scanf("%d %d", &N, &K);
 
-	if (K > N)
+	if (K > N)    /* 출력 초과가 발생하여 추가한 조건 */
 		return 0;
 
-	if (N == 1 && K == 1) {
+	if (N == 1 && K == 1) { /* 출력 초과가 발생하여 추가한 조건 */
 		printf("<1>");
 		return 0;
 	}
