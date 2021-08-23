@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
-
 /*
 리스트 
  기본적인 연산 : 삽입, 삭제, 검색 등 
