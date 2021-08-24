@@ -1,7 +1,7 @@
 > - [10845 큐](https://www.acmicpc.net/problem/10845)
 > - [18258 큐 2](https://www.acmicpc.net/problem/18258)
 
-큐가 자주 사용하는 연산 * push pop empty size * 를 이용하여 푸는 큐의 기본적인 문제였다.
+큐가 자주 사용하는 연산 *push pop empty size* 를 이용하여 푸는 큐의 기본적인 문제였다.
 
 18258 큐2 같은 경우,  
 문제의 조건이 명령의 수 N (1 ≤ N ≤ 2,000,000) 이므로 큐 생성 시 
