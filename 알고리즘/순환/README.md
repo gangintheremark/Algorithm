@@ -17,7 +17,7 @@ public static void func(int k) {
 ```
 
 ### 기본예제들 
-> - 정수 n에 대해서 0~n까지의 합. 
+- 정수 n에 대해서 0~n까지의 합. 
 ```
 public class code {
     public static void main(string [] args) {
@@ -35,7 +35,7 @@ public static int func(int n) {
 }
 ```
 
-> - 팩토리얼  <br>
+- 팩토리얼  <br>
 > 0! = 1 <br>
 > n! = n x (n-1)!  
 ```
@@ -48,7 +48,7 @@ public static int factorial(int n)
 }
 ```
 
-> - x<sup>n</sup>
+- x<sup>n</sup>
 ```
 public static double power(double x, int n) {
     if (n==0)
@@ -58,7 +58,7 @@ public static double power(double x, int n) {
 }
 ```
 
-> - fibonacci number <br>
+- fibonacci number <br>
 > f<sub>0</sub> = 0 <br>
 > f<sub>1</sub> = 1 <br>
 > f<sub>n</sub> = f<sub>n-1</sub> + f<sub>n-2</sub> 
@@ -71,7 +71,7 @@ public int fibonacci (int n) {
 }
 ```
 
-> - 최대공약수 <br>
+- 최대공약수 <br>
 > m>=n 인 두 양의 정수 m과 n에 대해서 m이 n의 배수이면 gcd(m,n) = n이고,<br> 그렇지 않으면 gcd(m,n) = gcd(n,m%n) 이다.
 ```
 public static double gcd(int m, int n) {
