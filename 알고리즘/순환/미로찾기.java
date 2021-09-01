@@ -17,7 +17,6 @@ boolean findPath(x,y)
             return true;
       return false;   
 */
-
 public class Maze {
   private static final int PATHWAY_COLOR = 0;
   private static final int WALL_COLOR = 1;
