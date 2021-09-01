@@ -15,8 +15,7 @@ public static void func(int k) {
     }
 } 
 ```
-
-### 기본예제들 
+### 기본 예제들 
 - 정수 n에 대해서 0~n까지의 합. 
 ```
 public class code {
