@@ -35,8 +35,8 @@ public static int func(int n) {
 }
 ```
 
-> - 팩토리얼 
-> 0! = 1
+> - 팩토리얼  <br>
+> 0! = 1 <br>
 > n! = n x (n-1)!  
 ```
 public static int factorial(int n)
@@ -58,9 +58,9 @@ public static double power(double x, int n) {
 }
 ```
 
-> - fibonacci number 
-> f<sub>0</sub> = 0
-> f<sub>1</sub> = 1
+> - fibonacci number <br>
+> f<sub>0</sub> = 0 <br>
+> f<sub>1</sub> = 1 <br>
 > f<sub>n</sub> = f<sub>n-1</sub> + f<sub>n-2</sub> 
 ```
 public int fibonacci (int n) {
@@ -71,8 +71,8 @@ public int fibonacci (int n) {
 }
 ```
 
-> - 최대공약수
-> m>=n 인 두 양의 정수 m과 n에 대해서 m이 n의 배수이면 gcd(m,n) = n이고, 그렇지 않으면 gcd(m,n) = gcd(n,m%n) 이다.
+> - 최대공약수 <br>
+> m>=n 인 두 양의 정수 m과 n에 대해서 m이 n의 배수이면 gcd(m,n) = n이고,<br> 그렇지 않으면 gcd(m,n) = gcd(n,m%n) 이다.
 ```
 public static double gcd(int m, int n) {
     if(q==0)
