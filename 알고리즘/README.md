@@ -9,4 +9,4 @@
 > 학습목표
 > - 순환의 개념을 학습하고 응용한다.
 > - 되추적기법(backtracking)을 이해한다.
-> - N-queen 문제, 미로찾기 문제, 멱집합, 순열 생성 등 문제들이 서로 다르지만 백트래킹이라는 공통된 전략으로 해결될 수 있으며 본질적으로 동일한 논리적 구조를 가지고 있음을 이해하는 것이 핵심 
+>   - [미로찾기](https://github.com/gangintheremark/study/blob/master/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%88%9C%ED%99%98/%EB%AF%B8%EB%A1%9C%EC%B0%BE%EA%B8%B0.java)
