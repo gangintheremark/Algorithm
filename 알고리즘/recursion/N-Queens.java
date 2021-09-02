@@ -11,7 +11,6 @@ boolean queens(int level) {   // 성공이냐 실패냐!
     visit children recursively;
 }
 */
-
 public class NqueensProblem {
 	private final static int N=8;
 	private static int[] cols = new int[N+1];
@@ -35,7 +34,6 @@ public class NqueensProblem {
 		}
 		return false;
 	}
-	
 	private static boolean promising(int level) {
 		for(int i=1;i<level;i++) {
 			if(cols[i] == cols[level])
