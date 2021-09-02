@@ -2,6 +2,7 @@
 cols[i] = j 는 말이 (i행, j열) 에 놓였음을 의미
 
 int[] cols = new int[N+1];
+
 boolean queens(int level) {   // 성공이냐 실패냐! 
   if (!promising(level)))     // 꽝
     return false;
