@@ -12,6 +12,7 @@ Stack* create();
 void push(Stack*, char);
 char pop(Stack*);
 
+
 int main()
 {
 	char buffer[100];
