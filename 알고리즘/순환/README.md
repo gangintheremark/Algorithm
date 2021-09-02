@@ -15,7 +15,10 @@ public static void func(int k) {
     }
 } 
 ```
-### 기본 예제들 
+### Backtracking (되추적기법)
+> 상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘
+
+### 순환 기본 예제들 
 - 정수 n에 대해서 0~n까지의 합. 
 ```
 public class code {
