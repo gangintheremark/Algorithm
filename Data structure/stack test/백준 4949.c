@@ -6,7 +6,6 @@ struct stack {
 	char* contents;
 	int top;
 };
-
 typedef struct stack Stack;
 
 Stack* create();
