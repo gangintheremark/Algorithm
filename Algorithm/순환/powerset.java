@@ -22,22 +22,22 @@
 
 public class Powerset {
 
-	private static char date[] = {'a', 'b','c','d','e','f'};
-	private static int n=date.length;
-	private static boolean [] include = new boolean [n];
-	
-	public static void powerSet(int k) {  // 트리 상의 현재 위치 표현 
-		if(k==n) {  // 현재 위치가 리프 노드 이면 출력하고 끝낸다.
-			for(int i=0;i<n;i++)
-				if(include[i])
+	private static char date[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+	private static int n = date.length;
+	private static boolean[] include = new boolean[n];
+
+	public static void powerSet(int k) { // 트리 상의 현재 위치 표현
+		if (k == n) { // 현재 위치가 리프 노드 이면 출력하고 끝낸다.
+			for (int i = 0; i < n; i++)
+				if (include[i])
 					System.out.print(date[i] + " ");
 			System.out.println();
 			return;
 		}
-        // 그렇지 않고, 리프노드가 아닌 트리 어딘가 위치 한다면
-		include[k] =false;  // 트리의 왼쪽 노드 방문
-		powerSet(k+1);
-		include[k] = true;  // 트리의 오른쪽 노드 방문
-		powerSet(k+1);
+		// 그렇지 않고, 리프노드가 아닌 트리 어딘가 위치 한다면
+		include[k] = false; // 트리의 왼쪽 노드 방문
+		powerSet(k + 1);
+		include[k] = true; // 트리의 오른쪽 노드 방문
+		powerSet(k + 1);
 	}
 }
