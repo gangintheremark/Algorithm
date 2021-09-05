@@ -1,3 +1,6 @@
+> - [10872 팩토리얼](https://www.acmicpc.net/problem/10872)
+> - [10870 피보나치 수 5](https://www.acmicpc.net/problem/10870)
+<br>
 > - [2774 별 찍기 - 10](https://www.acmicpc.net/problem/2447)
 
 알고리즘 중에 제일 약한 부분이 재귀 파트여서 문제를 보고 
