@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "stackADT.h"
 
-
 #define INIT_CAPACITY 100
 
-struct stack_type {
-   Item *contents;  //배열
+struct stack_type
+{
+   Item *contents; //배열
    int top;
    int size;
 };
@@ -22,9 +22,10 @@ Stack create()
    Stack s = (Stack)malloc(sizeof(struct stack_type));
    if (s == NULL)
       terminate("Error in create : stack could not be created");
-   s->contents = (Item*)malloc(INIT_CAPACITY * sizeof(Item));
+   s->contents = (Item *)malloc(INIT_CAPACITY * sizeof(Item));
 
-   if (s->contents == NULL) {
+   if (s->contents == NULL)
+   {
       free(s);
       terminate("Error in create : stack could not be created");
    }
@@ -36,7 +37,7 @@ Stack create()
 
 void destroy(Stack s)
 {
-   free(s->contents); //malloc 한게 스택자체와 스택의 내용 
+   free(s->contents); //malloc ?���? ?��?��?��체�?? ?��?��?�� ?��?��
    free(s);
 }
 
@@ -75,14 +76,14 @@ Item peek(Stack s)
 
 void reallocate(Stack s)
 {
-   Item *tmp = (Item*)malloc(2 * s->size * sizeof(Item));
+   Item *tmp = (Item *)malloc(2 * s->size * sizeof(Item));
 
-   if (tmp == NULL) 
+   if (tmp == NULL)
       terminate("Error in create : stack could not be created");
 
    for (int i = 0; i < s->size; i++)
       tmp[i] = s->contents[i];
    free(s->contents);
    s->contents = tmp;
-   s->size *= 2;   
+   s->size *= 2;
 }

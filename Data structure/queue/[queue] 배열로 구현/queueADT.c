@@ -3,15 +3,16 @@
 #include "queueADT.h"
 
 #define INIT_CAPACITY 100
-/*ë°°ì—´ë¡œ êµ¬í˜„*/
-struct queue_type {
-	Item* contents;
+/*¹è¿­·Î ±¸Çö*/
+struct queue_type
+{
+	Item *contents;
 	int front;
 	int rear;
-	int size;  // ì €ìž¥ëœ ë°ì´í„° ê°œìˆ˜
-	int capacity; // ë°°ì—´ contentsì˜ í¬ê¸° 
+	int size;	  // ÀúÀåµÈ µ¥ÀÌÅÍ °³¼ö
+	int capacity; //  ¹è¿­ contentsÀÇ Å©±â
 };
-void terminate(const char* message)
+void terminate(const char *message)
 {
 	printf("%s\n", message);
 	exit(EXIT_FAILURE);
@@ -28,7 +29,7 @@ Queue create()
 	if (q == NULL)
 		terminate("Error in create : queue could not be created");
 
-	q->contents = (Item*)malloc(INIT_CAPACITY * sizeof(Item));
+	q->contents = (Item *)malloc(INIT_CAPACITY * sizeof(Item));
 
 	if (q->contents == NULL)
 		free(q);
@@ -40,30 +41,34 @@ Queue create()
 	return q;
 }
 
-void destroy(Queue q) {
+void destroy(Queue q)
+{
 	free(q->contents);
 	free(q);
 }
-void make_empty(Queue q) {
+void make_empty(Queue q)
+{
 	q->front = 0;
 	q->rear = -1;
 	q->size = 0;
 }
 
-bool is_empty(Queue q) {
+bool is_empty(Queue q)
+{
 	return q->size == 0;
 }
-bool is_full(Queue q) {
+bool is_full(Queue q)
+{
 	return q->size == q->capacity;
 }
 
-void enqueue(Queue q, Item i) // íì˜ ë§¨ ë’¤(rear)ì— ì¶”ê°€
+void enqueue(Queue q, Item i) // Å¥ÀÇ ¸Ç µÚ(rear)¿¡ Ãß°¡
 {
 
 	if (is_full(q))
 		reallocate(q);
 
-	q->rear = (q->rear + 1) % q->capacity; // ëì— ë„ë‹¬í•˜ë©´ ë‹¤ì‹œ ì²˜ìŒìœ¼ë¡œ 
+	q->rear = (q->rear + 1) % q->capacity; // ³¡¿¡ µµ´ÞÇÏ¸é ´Ù½Ã Ã³À½À¸·Î
 	q->contents[q->rear] = i;
 	q->size++;
 }
@@ -84,17 +89,17 @@ Item peek(Queue q)
 		terminate("Error in dequeue: queue is empty");
 
 	return q->contents[q->front];
-
 }
 
 void reallocate(Queue q)
 {
-	Item* tmp = (Item*)malloc(2 * q->capacity * sizeof(Item));
+	Item *tmp = (Item *)malloc(2 * q->capacity * sizeof(Item));
 	if (tmp == NULL)
 		terminate("Error in create : queue could not be expanded");
 
 	int j = q->front;
-	for (int i = 0; i < q->size; i++) {
+	for (int i = 0; i < q->size; i++)
+	{
 		tmp[i] = q->contents[j];
 		j = (j + 1) % q->capacity;
 	}
