@@ -1,6 +1,5 @@
 #pragma warning(disable : 4996)
 #include <stdio.h>
-#define MAX 100
 
 void merge(int *, int, int, int);
 void merge_sort(int *, int, int);
