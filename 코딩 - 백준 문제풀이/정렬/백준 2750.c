@@ -1,9 +1,10 @@
 #pragma warning(disable : 4996)
 #include <stdio.h>
+#define MAX 1000000
 
 int main()
 {
-    int N, data[1000], index;
+    int N, data[MAX], index;
     scanf("%d", &N);
 
     for (int i = 0; i < N; i++)
