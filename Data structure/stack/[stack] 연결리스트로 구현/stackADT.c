@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include "stackADT.h"
 
-struct node {
+struct node
+{
    Item data;
-   struct node* next;
+   struct node *next;
 };
 
-struct stack_type {
+struct stack_type
+{
    struct node *top;
 };
 
@@ -68,7 +70,7 @@ Item pop(Stack s)
    free(old_top);
    return i;
 }
- 
+
 Item peek(Stack s)
 {
    if (is_empty(s))
