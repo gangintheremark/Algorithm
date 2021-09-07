@@ -1,12 +1,13 @@
 #pragma warning(disable : 4996)
 #include <stdio.h>
+#define MAX 1000000
 
 void merge(int *, int, int, int);
 void merge_sort(int *, int, int);
 
 int main()
 {
-    int N, index, data[1000000];
+    int N, index, data[MAX];
 
     scanf("%d", &N);
 
@@ -25,7 +26,7 @@ int main()
 void merge(int data[], int left, int mid, int right)
 {
     int i = left, j = mid + 1, k = left;
-    int tmp[1000000];
+    int tmp[MAX];
 
     while (i <= mid && j <= right)
     {
