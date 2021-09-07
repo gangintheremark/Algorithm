@@ -1,6 +1,6 @@
 ## 정렬 알고리즘
 
-#### bubble sort
+### bubble sort
 
 ```
 void bubble_sort(int list[], int n)
@@ -16,7 +16,7 @@ void bubble_sort(int list[], int n)
 
 시간복잡도 T(n) = (n-1) + (n-2) + ... + 2 + 1 = O(n<sup>2</sup>)
 
-#### selection sort
+### selection sort
 
 ```
 void selection_sort(int list[], int n)
@@ -35,7 +35,7 @@ void selection_sort(int list[], int n)
 
 시간복잡도 T(n) = (n-1) + (n-2) + ... + 2 + 1 = O(n<sup>2</sup>)
 
-#### Insertion sort
+### Insertion sort
 
 ```
 void insertion_sort(int list[], int n)
