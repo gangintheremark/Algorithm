@@ -43,7 +43,6 @@ void merge(int data[], int left, int mid, int right)
     for (int i = left; i <= right; i++)
         data[i] = tmp[i];
 }
-
 void merge_sort(int data[], int left, int right)
 {
     int mid = (left + right) / 2;
