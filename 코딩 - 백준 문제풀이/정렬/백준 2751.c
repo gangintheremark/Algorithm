@@ -22,7 +22,6 @@ int main()
     for (int i = 0; i < N; i++)
         printf("%d\n", data[i]);
 }
-
 void merge(int data[], int left, int mid, int right)
 {
     int i = left, j = mid + 1, k = left;
