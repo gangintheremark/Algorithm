@@ -1,6 +1,6 @@
+#pragma warning(disable : 4996)
 #include <stdio.h>
 
-// 너무너무너무너무 난잡 다시 풀기
 int main()
 {
     int C;
@@ -10,35 +10,32 @@ int main()
 
     for (int i = 0; i < C; i++)
     {
-        int N = 0, L = 0, temp = 0;
-        double min;
+        int N, L;
+        double min = 100;
         scanf("%d %d", &N, &L);
 
         for (int j = 0; j < N; j++)
-        {
             scanf("%d", &data[j]);
-            temp += data[j];
-        }
 
-        min = temp / N;
         int tmp = 0;
-        while (tmp < N - L + 1)
+        while (tmp <= N - L)
         {
-            int count = 0, sum = 0;
+            double count = 0, sum = 0;
+
             for (int k = tmp; k < N; k++)
             {
                 sum += data[k];
                 count++;
                 if (count >= L)
                 {
-                    double result = (double)sum / (double)count;
+                    double result = sum / count;
                     if (min > result)
                         min = result;
                 }
             }
             tmp++;
         }
-        printf("%.10lf \n", min);
+        printf("%0.12lf \n", min);
     }
     return 0;
 }
