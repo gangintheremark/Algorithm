@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 /*
-록 페스티벌 문제 c와 같은 코드인데 왜와이 자바는 오답이라 뜰까... ... 
-공부 더 한 다음 해결해보기 ★★★
+록 페스티벌 문제 c와 같은 코드인데 왜와이 자바는 오답일까...  
+공부 더 하고 해결해보기 
  */
 public class Main {
 	public static double min = Double.MAX_VALUE;
