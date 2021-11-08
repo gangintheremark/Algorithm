@@ -3,7 +3,7 @@ import java.util.Scanner;
 /* 9184번 */
 public class Main_9184 {
 	static Scanner s = new Scanner(System.in);
-	static int dp[][][] = new int[21][21][21]; // 이미 배열 생성
+	static int dp[][][] = new int[21][21][21];
 
 	public static int w(int a, int b, int c) {
 		if (bound(a, b, c) && dp[a][b][c] != 0)
@@ -20,7 +20,7 @@ public class Main_9184 {
 
 	}
 
-	static boolean bound(int a, int b, int c) {
+	static boolean bound(int a, int b, int c) { // 범위 체크
 		return a >= 0 && b >= 0 && c >= 0 && a <= 20 && b <= 20 && c <= 20;
 	}
 
@@ -34,7 +34,6 @@ public class Main_9184 {
 			if (a == -1 && b == -1 && c == -1)
 				break;
 			System.out.printf("w(%d, %d, %d) = %d \n", a, b, c, w(a, b, c));
-
 		}
 	}
 }

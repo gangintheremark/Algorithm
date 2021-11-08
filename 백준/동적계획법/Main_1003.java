@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+/* 1003¹ø */
 public class Main_1003 {
     static Scanner s = new Scanner(System.in);
 
