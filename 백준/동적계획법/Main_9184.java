@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /* 9184번 */
-public class Main {
+public class Main_9184 {
 	static Scanner s = new Scanner(System.in);
 	static int dp[][][] = new int[21][21][21]; // 이미 배열 생성
 
