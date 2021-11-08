@@ -2,7 +2,7 @@
 
 ### bubble sort
 
-```
+```c++
 void bubble_sort(int list[], int n)
 {
     for (int i = n - 1; i > 0; i++) {
@@ -18,7 +18,7 @@ void bubble_sort(int list[], int n)
 
 ### selection sort
 
-```
+```c++
 void selection_sort(int list[], int n)
 {
     for (int i = 0; i < n - 1; i++) {
@@ -37,7 +37,7 @@ void selection_sort(int list[], int n)
 
 ### Insertion sort
 
-```
+```c++
 void insertion_sort(int list[], int n)
 {
     int i, j, key;
