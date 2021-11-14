@@ -3,14 +3,14 @@
 > - n개의 행렬의 곱 A<sub>1</sub>A<sub>2</sub>A<sub>3</sub>...A<sub>n</sub>을 계산하는 최적의 순서는?
 > - 여기서 A<sub>i</sub>는 P<sub>k-1</sub>xP<sub>k</sub> 행렬
 
-1.순환식 세우기
+1.  순환식 세우기
 
-if(i==j)
-m[i][j] == 0;
-else(i<j)
+if(i==j) <br>
+m[i][j] = 0; <br>
+else(i<j) <br>
 min(m[i,k] + m[k+1,j] + p<sub>i-1</sub>p<sub>k</sub>p<sub>j</sub> );
 
-2. 동적계획법
+2.  동적계획법
 
 ```c++
 int matrixChain(int n) {
