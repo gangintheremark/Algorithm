@@ -5,10 +5,8 @@
 
 1.  순환식 세우기
 
-if(i==j) <br>
-m[i][j] = 0; <br>
-else(i<j) <br>
-min(m[i,k] + m[k+1,j] + p<sub>i-1</sub>p<sub>k</sub>p<sub>j</sub> );
+if(i==j) : m[i][j] = 0; <br>
+else(i<j) : min(m[i,k] + m[k+1,j] + p<sub>i-1</sub>p<sub>k</sub>p<sub>j</sub> );
 
 2.  동적계획법
 
