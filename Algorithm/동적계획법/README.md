@@ -1,4 +1,4 @@
-#### 동적계획법 (Dynamic programming)
+### 동적계획법 (Dynamic programming)
 
 > - 순환식의 값을 계산하는 기법
 > - 순환식을 memoization 또는 bottom-up 방식으로 푼다
